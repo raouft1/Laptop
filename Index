@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>متجر الحواسيب</title>
+    <style>
+        .product { border: 1px solid #ddd; padding: 10px; margin: 10px; width: 200px; float: left; }
+        .product img { width: 100%; height: auto; }
+        .filter, .search { margin-bottom: 20px; clear: both; }
+        form { clear: both; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <h1>منتجات الحواسيب</h1>
+    <div class="filter">
+        <label>صنف المنتج: </label>
+        <select id="categoryFilter">
+            <option value="all">الكل</option>
+        </select>
+    </div>
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+    </div>
+    <div id="productsContainer"></div>
+
+    <h2>إضافة منتج جديد</h2>
+    <form id="addProductForm">
+        <input type="text" id="name" placeholder="اسم المنتج" required><br>
+        <input type="number" id="price" placeholder="السعر" required><br>
+        <input type="text" id="desc" placeholder="الوصف" required><br>
+        <input type="url" id="image" placeholder="رابط الصورة" required><br>
+        <input type="text" id="category" placeholder="الصنف" required><br>
+        <button type="submit">إضافة المنتج</button>
+    </form>
+    <div id="addStatus"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
